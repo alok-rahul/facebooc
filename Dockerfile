@@ -1,6 +1,5 @@
 FROM  ubuntu
 
-
 WORKDIR /opt/facebooc
 
 RUN  apt-get update &&  \
@@ -9,9 +8,11 @@ RUN  apt-get update &&  \
 
 COPY . /opt/facebooc
 
+
 RUN  make all 
+
 
 EXPOSE 16000
 
-CMD "bin/facebooc"
 
+CMD "bin/facebooc"
